@@ -32,6 +32,7 @@ You can find the bill of materials on my [Portfolio page](https://ibrahimovic199
 
 ## Control system development
 In the case of a real robot, it is needed to develop a control system in order to have a feedback on the actual speed. On the contrary in the simulation the robot
+
 <img src="images/control_system.png" alt="alt text" width="550" height="250">
 
 ## Software integration
