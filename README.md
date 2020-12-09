@@ -18,6 +18,10 @@ ZED 2 & Encoders           |  Jetson Nano              |  Arduino / motor driver
 
 Here I will briefly refer on the Hardware Set Up focusing on the communication between the various elements. Then I will focus on the development of the control system and at the end I will talk about the software integration with the simulation system.  
 
+- [Hardware Set up](https://github.com/LucaRoma97/ZEDbot-robot-integration#hardware-set-up)
+- [Control system Development](https://github.com/LucaRoma97/ZEDbot-robot-integration#control-system-development)
+- [Software integration](https://github.com/LucaRoma97/ZEDbot-robot-integration#software-integration)
+
 ## Hardware Set up
 The core of the robot is the NVIDIA Jetson Nano embedded platform. It gets the camera data from the ZED 2 stereocamera and the encoders data as input, elaborates them and provides as output the speeds for the right and left wheels. 
 
