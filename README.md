@@ -13,7 +13,7 @@ So, I decided to build one simple three-wheels robot. This robot is composed of 
 
 ZED 2 & Encoders           |  Jetson Nano              |  Arduino / motor driver
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="images/zed_encoders.png" alt="alt text" width="300" height="250">  |  <img src="images/jetson_nano.png" alt="alt text" width="300" height="250"> |  <img src="images/motor_scheme.png" alt="alt text" width="300" height="250">
+<img src="images/zed_encoders.png" alt="alt text" width="300" height="220">  |  <img src="images/jetson_nano.png" alt="alt text" width="300" height="220"> |  <img src="images/motor_scheme.png" alt="alt text" width="300" height="220">
 
 
 Here I will briefly refer on the Hardware Set Up focusing on the communication between the various elements. Then 
@@ -28,7 +28,10 @@ Communication bridges:
 - **Encoders -> Arduino -> Jetson Nano** : Encoders data
 - **Jetson -> Arduino -> motor driver** : Speed data transmission
 
-## Control system development
+You can find the bill of materials on my [Portfolio page](https://ibrahimovic19974.wixsite.com/website/autonomous-charging-project) and the video of the [building](https://www.youtube.com/watch?v=MnDWOQ7e5MM&t=22s) of the robot on my Youtube channel. 
 
+## Control system development
+In the case of a real robot, it is needed to develop a control system in order to have a feedback on the actual speed. On the contrary in the simulation the robot
+<img src="images/control_system.png" alt="alt text" width="550" height="250">
 
 ## Software integration
