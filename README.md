@@ -54,11 +54,14 @@ These three functions call each other and work simulateously.
 In this function the first step has been to initialize the pins according to the connected wires. The pins *enA* and *enB* concern the duty cycle of the PWM wave to be transmitted to the corresponding motor driver pins, while the others refer only on the direction of the rotation.
 
 Then, two are the main functionalities this function implements:
-- **motor input**: to subscribe the final speed input information coming from *VelDocking* (*cmd_vel*) and set it to the relative pins.
 - **encoders**: to count the "ticks" (i.e. time in which the sensor detects an hole on the disk) and publishes on *wheel_encoder* topic. It takes advantage of 3 interrupts, 2 attached to the encoders pin (left and right) and a timer interrupt to call a function each 0.1 sec to publish the amount of ticks until that moment.
+- **motor input**: to subscribe the final speed input information coming from *VelDocking* (*cmd_vel*) and set it to the relative pins.
 
 ### odom_function
-Thiegoal of this function is to manipulate the encoders data and to publish them under the odometry message structure. 
+The goal of this function is to manipulate the encoders data (ticks) and to publish them under the odometry message structure. 
+
+<img src="images/odometry_message.png" alt="alt text" width="350" height="400">
+
 The passages are the following:
 - **ticks -> Left and right velocities**: by the mean of a time reference and the radius information
 - **Left and Right velocities -> Vx, Vy and Vth**: simple differential drive 
