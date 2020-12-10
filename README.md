@@ -70,7 +70,7 @@ The passages are the following:
 
 <img src="images/differential_drive.png" alt="alt text" width="350" height="250">
 
-### [VelDocking](https://github.com/LucaRoma97/ZEDbot-robot-integration/blob/main/VelDocking.cpp)
+### [VelDocking](https://github.com/LucaRoma97/ZEDbot-robot-integration/blob/main/Veldocking.cpp)
 This function integrates the PI control system described above. It executes three main features:
 - *Subscription* to the **desired_speeds** coming from the simulation [docking function](https://github.com/LucaRoma97/dockingrobot/tree/a28d013236bdf047667e3db3c0b97a9e773126d9).
 - *Subscription* to the **wheel_encoder** topic where Arduino functions publishes the actual speeds.
