@@ -79,19 +79,6 @@ void desvelCallback(const geometry_msgs::Twist::ConstPtr& Dvelocity)
 
 }
 
-/*
-void veldesCallback(const geometry_msgs::Vector3::ConstPtr& velocity)
-{
-
-   errorl = leftvel - velocity->x;
-
-   errorr = rightvel - velocity->y;
-
-   PubVelocity();
-
-}
-
-*/
 
 int main(int argc, char **argv)
 { 
@@ -104,8 +91,6 @@ int main(int argc, char **argv)
   ros::Subscriber sub = n.subscribe("left_right", 10, wheelCallback);
 
   ros::Subscriber dc_sub = n.subscribe("des_cmd_vel", 1, desvelCallback);
-
-  //ros::Subscriber cd_sub = n.subscribe("cmd_des_vel", 1, veldesCallback);
 
   ros::spin();
 
