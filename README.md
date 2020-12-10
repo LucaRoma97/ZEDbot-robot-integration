@@ -73,7 +73,7 @@ The passages are the following:
 ### [VelDocking](https://github.com/LucaRoma97/ZEDbot-robot-integration/blob/main/Veldocking.cpp)
 This function integrates the PI control system described above. It executes three main features:
 - *Subscription* to the **desired_speeds** coming from the simulation [docking function](https://github.com/LucaRoma97/dockingrobot/tree/a28d013236bdf047667e3db3c0b97a9e773126d9).
-- *Subscription* to the **wheel_encoder** topic where Arduino functions publishes the actual speeds.
+- *Subscription* to the **left_right** topic where *odom_function* publishes the actual left and right speeds.
 - *Pubblication* of the computed input on the **cmd_vel** topic.
 
 The two speeds are compared and the inputs are computed by applying the proportional and integrative parameters per each wheel. A range for the inputs is set in order to be compatible with the motor driver limitations (0-255). The control system parameters (i.e. Kp and Ki) have been calibrated during the robot tests. 
