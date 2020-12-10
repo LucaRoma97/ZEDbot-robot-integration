@@ -28,7 +28,7 @@ void PubVelocity()
 
     iPartr += Kir*errorr;
 
-    pPartr = Kpr*errorr; //put to 0 if .... see the reference
+    pPartr = Kpr*errorr; 
 
     velocity.x = pPartl + iPartl;
 
