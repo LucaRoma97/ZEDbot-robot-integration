@@ -13,7 +13,7 @@ So, I decided to build one simple three-wheels robot. This robot is composed of 
 
 ZED 2 & Encoders           |  Jetson Nano              |  Arduino / motor driver
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="images/zed_encoders.png" alt="alt text" width="300" height="220">  |  <img src="images/jetson_nano.png" alt="alt text" width="300" height="220"> |  <img src="images/motor_scheme.png" alt="alt text" width="300" height="220">
+<img src="images/zed_encoders.png" alt="alt text" width="300" height="180">  |  <img src="images/jetson_nano.png" alt="alt text" width="300" height="200"> |  <img src="images/motor_scheme.png" alt="alt text" width="300" height="220">
 
 
 Here I will briefly refer on the Hardware Set Up focusing on the communication between the various elements. Then I will focus on the development of the control system and at the end I will talk about the software integration with the simulation system.  
