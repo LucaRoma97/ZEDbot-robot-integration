@@ -50,14 +50,14 @@ The three main functions added for the software integration are:
 
 These three functions call each other and work simulateously. 
 
-### ROS encoders
+### [ROS encoders](https://github.com/LucaRoma97/ZEDbot-robot-integration/blob/main/ROSencoders-motors.ino)
 In this function the first step has been to initialize the pins according to the connected wires. The pins *enA* and *enB* concern the duty cycle of the PWM wave to be transmitted to the corresponding motor driver pins, while the others refer only on the direction of the rotation.
 
 Then, two are the main functionalities this function implements:
 - **encoders**: to count the "ticks" (i.e. time in which the sensor detects an hole on the disk) and publishes on *wheel_encoder* topic. It takes advantage of 3 interrupts, 2 attached to the encoders pin (left and right) and a timer interrupt to call a function each 0.1 sec to publish the amount of ticks until that moment.
 - **motor input**: to subscribe the final speed input information coming from *VelDocking* (*cmd_vel*) and set it to the relative pins.
 
-### odom_function
+### [odom_function](https://github.com/LucaRoma97/ZEDbot-robot-integration/blob/main/odom_function.cpp)
 The goal of this function is to manipulate the encoders data (ticks) and to publish them under the odometry message structure. 
 
 <img src="images/odometry_message.png" alt="alt text" width="350" height="400">
@@ -70,7 +70,7 @@ The passages are the following:
 
 <img src="images/differential_drive.png" alt="alt text" width="350" height="250">
 
-### VelDocking
+### [VelDocking](https://github.com/LucaRoma97/ZEDbot-robot-integration/blob/main/VelDocking.cpp)
 This function integrates the PI control system described above. It executes three main features:
 - *Subscription* to the **desired_speeds** coming from the simulation [docking function](https://github.com/LucaRoma97/dockingrobot/tree/a28d013236bdf047667e3db3c0b97a9e773126d9).
 - *Subscription* to the **wheel_encoder** topic where Arduino functions publishes the actual speeds.
