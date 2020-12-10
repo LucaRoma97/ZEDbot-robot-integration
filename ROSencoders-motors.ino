@@ -42,33 +42,7 @@ void ISR_count2()
   counter2++;  // increment Motor 2 counter value
 } 
 
-/*
-// TimerOne ISR
-void ISR_timerone()
-{
-  Timer1.detachInterrupt();  // Stop the timer
-  //Serial.print("Motor Speed 1: "); 
-  float rotation1 = (counter1 / diskslots) * 60;  // calculate RPM for Motor 1
-  //Serial.print(rotation1);  
-  //erial.print(" RPM - "); 
-  counter1 = 0;  //  reset counter to zero
-  //Serial.print("Motor Speed 2: "); 
-  float rotation2 = (counter2 / diskslots) * 60;  // calculate RPM for Motor 2
-  //Serial.print(rotation2);  
-  //Serial.println(" RPM"); 
-  counter2 = 0;  //  reset counter to zero
-    
-  //odomvel=(rotation1-rotation2);//*3.14/600*0.04/0.14;
-  //vel.x = odomvel;
-  vel.x = counter1;
-  vel.y = counter2;
-  //Serial.print("vel");
-  //Serial.print(odomvel);
-  odom_pub.publish(&vel);
-  Timer1.attachInterrupt( ISR_timerone );  // Enable the timer
-  delay(10);
-}
-*/
+
 
 void ISR_timerone()
 {
